@@ -19,7 +19,7 @@ Code changes are made in branchs and merged into development using a pull reques
     git pull origin master
     ```
     * Switch back to your feature branch and merge in master. `git merge master`
-    * Commit and push changes to github.
+    * Commit and push changes to github. `git push some-feature-branch`
     * Open a pull request via GitHub and click merge.
 
 This flow should prevent us from stepping on each others code and keeps all merge conflicts
