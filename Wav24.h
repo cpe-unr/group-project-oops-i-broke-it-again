@@ -8,18 +8,18 @@
  */
 #include "WaveHeader.h"
 
-class 8bitWav {
+class 24bitWav {
 public:
     void readFile(const std::string &fileName);
     void writeFile(const std::string &outFileName);
 private:
-    unsigned char* buffer = NULL;
+    unsigned int* buffer = NULL;
     wav_header waveHeader;
 public:
     virtual ~Wav();
 
 public:
-    unsigned char *getBuffer();
+    unsigned int *getBuffer();
     int getBufferSize() const;
 };
 
