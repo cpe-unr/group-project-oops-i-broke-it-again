@@ -1,3 +1,6 @@
+#ifndef WAV_FINDER_H
+#define WAV_FINDER_H
+
 #include "../interfaces/FileHandler.h"
 #include <vector>
 #include <string>
@@ -11,3 +14,5 @@ class WavFinder: public FileHandler  {
 public:
     std::vector<std::string> getFiles();
 };
+
+#endif
