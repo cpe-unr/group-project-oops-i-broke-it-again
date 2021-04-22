@@ -1,4 +1,5 @@
 /** @file */
+#include "WavFinder/WavFinder.h"
 #include <iostream>
 
 /**
@@ -26,6 +27,6 @@ void fn(){
 }
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    WavFinder().getFiles();
     return 0;
 }
