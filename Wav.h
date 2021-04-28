@@ -1,26 +1,28 @@
 #ifndef PROGRAMMING_ASSIGNMENT_3KL_WAV_H
 #define PROGRAMMING_ASSIGNMENT_3KL_WAV_H
 
-/*
- * This class is designed to work with PCM 8-bit mono wavefiles.
- * It makes many assumptions about the format of the wave as a result.
- * It will NOT work with stereo files or any other bit-depth than 8 bits.
- */
+#include <string>
 #include "WaveHeader.h"
 
-class Wav {
+class 8bitWav {
 public:
     void readFile(const std::string &fileName);
     void writeFile(const std::string &outFileName);
 private:
     unsigned char* buffer = NULL;
     wav_header waveHeader;
+	std::string Artist = "0";
+	std::string songName = "0";
 public:
     virtual ~Wav();
 
 public:
     unsigned char *getBuffer();
     int getBufferSize() const;
+	int getbitDepth() const;
+	int getnumChannels() const;
+	std::string getArtist() const;
+	std::string getsongName() const;
 };
 
 

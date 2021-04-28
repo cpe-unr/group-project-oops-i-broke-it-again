@@ -6,29 +6,26 @@
 
 
 void Wav::readFile(const std::string &fileName) {
+    std::string metadataTemp;
     std::ifstream file(fileName,std::ios::binary | std::ios::in);
     if(file.is_open()){
         file.read((char*)&waveHeader, sizeof(wav_header));
-	if(waveHeader.bit_depth == 8 && waveHeader.num_channels == 1){
-        	buffer = new unsigned char[waveHeader.data_bytes];
-        	file.read((char*)buffer, waveHeader.data_bytes);	
-	}
-	if(waveHeader.bit_depth == 16 && waveHeader.num_channels == 1){
-	}
-	if(waveHeader.bit_depth == 24 && waveHeader.num_channels == 1){
-	}
-	if(waveHeader.bit_depth == 32 && waveHeader.num_channels == 1){
-	}
-	if(waveHeader.bit_depth == 8 && waveHeader.num_channels == 2){
-	}
-	if(waveHeader.bit_depth == 16 && waveHeader.num_channels == 2){
-	}
-	if(waveHeader.bit_depth == 24 && waveHeader.num_channels == 2){
-	}
-	if(waveHeader.bit_depth == 32 && waveHeader.num_channels == 2){
-	}
-
-        file.close();
+        buffer = new unsigned char[waveHeader.data_bytes];
+        file.read((char*)buffer, waveHeader.data_bytes);
+		while(!file.eof()){
+	 	   std::getline(file, metadataTemp);
+			if(strncmp(metadataTemp, "INAM", 4){
+				std::getline(file, metadataTemp);
+				std::getline(file, metadataTemp);
+				songName = metadataTemp;
+			}
+			if(strncmp(metadataTemp, "IART", 4){
+				std::getline(file, metadataTemp);
+				std::getline(file, metadataTemp);
+				Artist = metadataTemp;
+			}
+		}
+		file.close();
     }
 }
 
@@ -51,4 +48,19 @@ Wav::~Wav() {
 
 int Wav::getBufferSize() const {
     return waveHeader.data_bytes;
+}
+
+int Wav::getbitDepth() const {
+    return waveHeader.bit_depth;
+}
+
+int getnumChannels() const {
+    return waveHeader.num_channels;
+}
+std::string getArtist() const {
+    return Artist;
+}
+
+std::string getsongName() const {
+    return songName;
 }
