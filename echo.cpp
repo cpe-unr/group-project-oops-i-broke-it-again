@@ -21,6 +21,7 @@
 						}
 					}
 					buffer = reinterpret_cast<unsigned char*>(shortBuffer);
+				}
 			}
 			if(numChannels == 2){
 				if(bitDepth == 8){
@@ -41,4 +42,5 @@
 					}
 					buffer = reinterpret_cast<unsigned char*>(shortBuffer);
 				}
-		}
+			}
+}
