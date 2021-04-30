@@ -15,7 +15,17 @@ class Normalizer : public IProcessable {
 * @param numChannels - number of channels of the .wav
 */
 		void processBuffer(unsigned char* buffer, int bufferSize, int bitDepth, int numChannels) override;
+
+/**
+* Function to find the max of two values
+* @param first - first value to compare
+* @param second - second value to compare
+*/
+		template <typename T>
+		T getMax(T first, T second);
+
 };
 
+#include "normalizer.cpp"
 #endif
 
