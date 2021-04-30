@@ -64,6 +64,15 @@ std::string Wav::getArtist() const {
     return Artist;
 }
 
-std::string Wav::getsongName() const {
+void Wav::setArtist(std::string x) {
+	Artist = x;
+}
+
+std::string Wav::getSongName() const {
     return songName;
 }
+
+void Wav::setSongName(std::string y) {
+	songName = y;
+}
+

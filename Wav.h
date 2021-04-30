@@ -51,10 +51,21 @@ public:
 * Returns the Artist held on a .wav file
 */
 	std::string getArtist() const;
+
+/**
+* Changes the value of string Artist
+* @param x - string to replace Artist value
+*/
+	void setArtist(std::string x);
 /**
 * Returns the song name contained in a .wav file
 */
-	std::string getsongName() const;
+	std::string getSongName() const;
+/**
+* Changes value of string songName
+* @param y - string to replace songName value
+*/
+	void setSongName(std::string y);
 };
 
 
