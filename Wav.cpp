@@ -1,8 +1,8 @@
 #include <string>
+#include <cstring>
 #include <fstream>
 #include <iostream>
 #include "Wav.h"
-
 
 
 void Wav::readFile(const std::string &fileName) {
@@ -14,12 +14,12 @@ void Wav::readFile(const std::string &fileName) {
         file.read((char*)buffer, waveHeader.data_bytes);
 		while(!file.eof()){
 	 	   std::getline(file, metadataTemp);
-			if(strncmp(metadataTemp, "INAM", 4){
+			if(metadataTemp.compare(0, 4, "INAM") == 0){
 				std::getline(file, metadataTemp);
 				std::getline(file, metadataTemp);
 				songName = metadataTemp;
 			}
-			if(strncmp(metadataTemp, "IART", 4){
+			if(metadataTemp.compare(0, 4, "IART") == 0){
 				std::getline(file, metadataTemp);
 				std::getline(file, metadataTemp);
 				Artist = metadataTemp;
@@ -38,6 +38,8 @@ void Wav::writeFile(const std::string &outFileName) {
     std::ofstream outFile(outFileName, std::ios::out | std::ios::binary);
     outFile.write((char*)&waveHeader,sizeof(wav_header));
     outFile.write((char*)buffer, waveHeader.data_bytes);
+    outFile << "INAM" << std::endl << songName.length() << std::endl << songName;
+    outFile << "IART" << std::endl << Artist.length() << std::endl << Artist;
     outFile.close();
 }
 
@@ -54,13 +56,23 @@ int Wav::getbitDepth() const {
     return waveHeader.bit_depth;
 }
 
-int getnumChannels() const {
+int Wav::getnumChannels() const {
     return waveHeader.num_channels;
 }
-std::string getArtist() const {
+
+std::string Wav::getArtist() const {
     return Artist;
 }
 
-std::string getsongName() const {
+void Wav::setArtist(std::string x) {
+	Artist = x;
+}
+
+std::string Wav::getSongName() const {
     return songName;
 }
+
+void Wav::setSongName(std::string y) {
+	songName = y;
+}
+
