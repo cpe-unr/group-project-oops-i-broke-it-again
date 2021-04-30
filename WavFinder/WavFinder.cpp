@@ -6,26 +6,29 @@
 #include <stdio.h>
 #include <string.h>
 
-std::vector<std::string> WavFinder::getFiles() {
-    std::string dirPath = getUsersDirectory();
-    std::vector<std::string> files = getFilesFromDirectory(dirPath);
+void WavFinder::handle(std::vector<std::string> args) {
+    std::cout<< "WavFinder::handle" << std::endl;
+    std::string dirPath = args.at(0);
+    files = getFilesFromDirectory(dirPath);
 
     // TODO: remove. Used for debugging.
     for (auto f : files) {
         std::cout << "f: " << f << std::endl;
     }
+}
 
+std::vector<std::string> WavFinder::getFiles() {
     return files;
 }
 
-std::string WavFinder::getUsersDirectory() {
-    std::cout << "Enter path dir: " << std::endl;
+// std::string WavFinder::getUsersDirectory() {
+//     std::cout << "Enter path dir: " << std::endl;
 
-    std::string dirPath;
-    std::cin >> dirPath;
+//     std::string dirPath;
+//     std::cin >> dirPath;
 
-    return dirPath;
-}
+//     return dirPath;
+// }
 
 std::vector<std::string> WavFinder::getFilesFromDirectory(std::string dirPath) {
     std::vector<std::string> files;

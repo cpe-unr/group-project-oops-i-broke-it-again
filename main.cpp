@@ -1,5 +1,9 @@
 /** @file */
 #include "WavFinder/WavFinder.h"
+#include "WavFinder/WavFinderCommand.h"
+#include "cli/Command.h"
+#include <string>
+#include <sstream>
 #include <iostream>
 
 /**
@@ -26,7 +30,40 @@ void fn(){
 
 }
 
+std::vector<std::string> parse(std::string command);
+Command* getCommand(std::string input);
+
 int main() {
-    WavFinder().getFiles();
-    return 0;
+    std::string input = "";
+    std::vector<std::string> inputs;
+
+    while(input != "exit") {
+        std::string s;
+        std::getline(std::cin, s);
+        inputs = parse(s);
+        std::string scommand = inputs.at(0);
+        std::vector<std::string> args(inputs.begin() + 1, inputs.end());
+        
+        Command* command = getCommand(scommand);
+        command->execute(args);
+    }
+}
+
+Command* getCommand(std::string input) {
+    std::cout << "getCommand" << input << std::endl;
+    if (input == "load") {
+        return new WavFinderCommand(new WavFinder());
+    }
+}
+
+std::vector<std::string> parse(std::string command) {
+    std::vector<std::string> tokenized;
+
+    std::string tmp;
+    std::stringstream ss(command);
+    while(getline(ss, tmp, ' ')) {
+        tokenized.push_back(tmp);
+    }
+
+    return tokenized;
 }
