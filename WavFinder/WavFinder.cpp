@@ -10,15 +10,13 @@
 #include <stdexcept>
 
 void WavFinder::handle(std::vector<std::string> args) {
-    std::cout << "here" << std::endl;
-    std::string dirPath = args.at(0);
+    dirPath = args.at(0);
     
-    files = getFilesFromDirectory(dirPath);
-    Wav* wavReader = new Wav();
+    files = getFilesFromDirectory();
 
     // TODO: remove. Used for debugging.
     for (auto f : files) {
-        std::cout << "f: " << f << std::endl;
+        Wav* wavReader = new Wav();
         wavReader->readFile(f);
         wavs.push_back(wavReader);
     }
@@ -34,7 +32,7 @@ std::vector<Wav*> WavFinder::getWavs() {
 
 Wav* WavFinder::getWavFromFileName(std::string fileName) {
     int correspondingIndex = 0;
-    auto it = std::find(files.begin(), files.end(), fileName);
+    auto it = std::find(files.begin(), files.end(), getFullPath(fileName));
 
     if (it != files.end()) {
         int correspondingIndex = it - files.begin();
@@ -45,7 +43,11 @@ Wav* WavFinder::getWavFromFileName(std::string fileName) {
     return wavs.at(correspondingIndex);
 }
 
-std::vector<std::string> WavFinder::getFilesFromDirectory(std::string dirPath) {
+std::string WavFinder::getFullPath(std::string fileName) {
+    return dirPath + "/" + fileName;
+}
+
+std::vector<std::string> WavFinder::getFilesFromDirectory() {
     std::vector<std::string> files;
 
     if (auto dir = opendir((dirPath + "/").c_str())) {
@@ -53,7 +55,7 @@ std::vector<std::string> WavFinder::getFilesFromDirectory(std::string dirPath) {
             if (isInvalidWavFile(f))
                 continue; 
 
-            files.push_back(f->d_name);
+            files.push_back(getFullPath(f->d_name));
         }
         closedir(dir);
     } else {

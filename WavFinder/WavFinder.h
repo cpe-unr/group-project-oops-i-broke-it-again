@@ -8,10 +8,11 @@
 #include <dirent.h>
 
 class WavFinder: public CommandHandler  {
+    std::string dirPath;
     std::vector<std::string> files;
     std::vector<Wav*> wavs;
     std::string getUsersDirectory();
-    std::vector<std::string> getFilesFromDirectory(std::string dirPath);
+    std::vector<std::string> getFilesFromDirectory();
     bool isInvalidWavFile(dirent* f);
 
 public:
@@ -20,6 +21,7 @@ public:
     std::vector<std::string> getFiles();
     std::vector<Wav*> getWavs();
     Wav* getWavFromFileName(std::string fileName);
+    std::string getFullPath(std::string fileName);
 };
 
 #endif

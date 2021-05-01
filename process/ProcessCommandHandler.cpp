@@ -5,6 +5,7 @@
 #include <string>
 #include <iostream>
 #include <stdexcept>
+#include <fstream>
 
 ProcessCommandHandler::ProcessCommandHandler(
     std::vector<IProcessable*> proccesses,
@@ -60,5 +61,13 @@ void ProcessCommandHandler::handle(std::vector<std::string> args) {
         }
     }
 
-    wav->writeFile(outputFileName);
+    // check if file exists already. don't want to blindly overwrite.
+    bool fileExists = std::ifstream(outputFileName.c_str()).good();
+    if (!fileExists) {
+        
+    } else {
+        std::cout << "file already exists." << std::endl;
+    }
+    
+    
 }
