@@ -1,9 +1,7 @@
 /** @file */
 #include "WavFinder/WavFinder.h"
-#include "WavFinder/WavFinderCommand.h"
-#include "cli/Command.h"
+#include "cli/CommandParser.h"
 #include <string>
-#include <sstream>
 #include <iostream>
 
 /**
@@ -30,40 +28,23 @@ void fn(){
 
 }
 
-std::vector<std::string> parse(std::string command);
-Command* getCommand(std::string input);
-
 int main() {
     std::string input = "";
-    std::vector<std::string> inputs;
+    WavFinder* wavFinder = new WavFinder();
 
-    while(input != "exit") {
-        std::string s;
-        std::getline(std::cin, s);
-        inputs = parse(s);
-        std::string scommand = inputs.at(0);
-        std::vector<std::string> args(inputs.begin() + 1, inputs.end());
+    std::cout << "Welcome to Audioprocessor CLI!\n\n" <<
+    "Commands:\n" << 
+    "    load [file directory]\n" <<
+    "    process [file name] [output file name] [processors...]\n" <<
+    "    edit-meta [file name] [meta data type] your new meta data value\n"<<
+    std::endl;
+
+    while(input.find("exit")) {
+        std::getline(std::cin, input);
         
-        Command* command = getCommand(scommand);
-        command->execute(args);
+        CommandParser parser = CommandParser(wavFinder);
+        parser.parse(input);
+        auto a = parser.getArgs();
+        parser.getCommand()->execute(parser.getArgs());
     }
-}
-
-Command* getCommand(std::string input) {
-    std::cout << "getCommand" << input << std::endl;
-    if (input == "load") {
-        return new WavFinderCommand(new WavFinder());
-    }
-}
-
-std::vector<std::string> parse(std::string command) {
-    std::vector<std::string> tokenized;
-
-    std::string tmp;
-    std::stringstream ss(command);
-    while(getline(ss, tmp, ' ')) {
-        tokenized.push_back(tmp);
-    }
-
-    return tokenized;
 }

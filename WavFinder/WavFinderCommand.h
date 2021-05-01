@@ -2,6 +2,7 @@
 #define WAV_FINDER_COMMAND_H
 
 #include "../cli/Command.h"
+#include "../cli/CommandHandler.h"
 #include <vector>
 #include <string>
 

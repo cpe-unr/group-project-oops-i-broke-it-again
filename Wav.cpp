@@ -35,6 +35,13 @@ unsigned char *Wav::getBuffer(){
 }
 
 void Wav::writeFile(const std::string &outFileName) {
+
+    // check if file exists already. don't want to blindly overwrite.
+    if (std::ifstream(outFileName.c_str()).good()) {
+        std::cout << "file already exists." << std::endl;
+        return;
+    }
+
     std::ofstream outFile(outFileName, std::ios::out | std::ios::binary);
     outFile.write((char*)&waveHeader,sizeof(wav_header));
     outFile.write((char*)buffer, waveHeader.data_bytes);
