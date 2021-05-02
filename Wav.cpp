@@ -11,6 +11,7 @@ void Wav::readFile(const std::string &fileName) {
     if(file.is_open()){
         file.read((char*)&waveHeader, sizeof(wav_header));
         buffer = new unsigned char[waveHeader.data_bytes];
+        std::cout << "hi3" << waveHeader.data_bytes << std::endl;
         file.read((char*)buffer, waveHeader.data_bytes);
 		while(!file.eof()){
 	 	   std::getline(file, metadataTemp);

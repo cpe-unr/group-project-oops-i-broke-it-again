@@ -1,5 +1,7 @@
 /** @file */
 #include "WavFinder/WavFinder.h"
+#include "cli/CommandParser.h"
+#include <string>
 #include <iostream>
 
 /**
@@ -27,6 +29,22 @@ void fn(){
 }
 
 int main() {
-    WavFinder().getFiles();
-    return 0;
+    std::string input = "";
+    WavFinder* wavFinder = new WavFinder();
+
+    std::cout << "Welcome to Audioprocessor CLI!\n\n" <<
+    "Commands:\n" << 
+    "    load [file directory]\n" <<
+    "    process [file name] [output file name] [processors...]\n" <<
+    "    edit-meta [file name] [meta data type] your new meta data value\n"<<
+    std::endl;
+
+    while(input.find("exit")) {
+        std::getline(std::cin, input);
+        
+        CommandParser parser = CommandParser(wavFinder);
+        parser.parse(input);
+        auto a = parser.getArgs();
+        parser.getCommand()->execute(parser.getArgs());
+    }
 }
