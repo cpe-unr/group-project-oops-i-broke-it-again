@@ -10,7 +10,6 @@
 #include <string>
 #include <sstream>
 #include <algorithm>
-
 #include <iostream>
 
 CommandParser::CommandParser(WavFinder* wavFinder): wavFinder(wavFinder) {}
