@@ -3,6 +3,9 @@
 #include "../process/ProcessCommand.h"
 #include "../process/ProcessCommandHandler.h"
 #include "../edit-meta/EditMetaCommand.h"
+#include "../export/CsvExporter.h"
+#include "../export/ExportCommand.h"
+#include "../export/Exporter.h"
 #include "../noisegate.h"
 #include "../echo.h"
 #include "../normalizer.h"
@@ -12,7 +15,9 @@
 #include <algorithm>
 #include <iostream>
 
-CommandParser::CommandParser(WavFinder* wavFinder): wavFinder(wavFinder) {}
+CommandParser::CommandParser(WavFinder* wavFinder, Exporter* exporter): 
+    wavFinder(wavFinder), 
+    exporter(exporter) {}
     
 void CommandParser::parse(std::string input) {
     std::vector<std::string> tokenized;
@@ -48,5 +53,9 @@ Command* CommandParser::createCommand(std::string input) {
         return new ProcessCommand(new ProcessCommandHandler(proccesses, wavFinder));
     } else if (input == "edit-meta") {
         return new EditMetaCommand(wavFinder);
+    } else if (input == "export") {
+        return new ExportCommand(exporter);
+    } else {
+        return nullptr;
     }
 }

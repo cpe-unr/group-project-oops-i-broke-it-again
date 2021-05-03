@@ -1,5 +1,3 @@
-#ifndef NORMALIZER_CPP
-#define NORMALIZER_CPP
 #include "normalizer.h"
 
 
@@ -27,12 +25,3 @@ void Normalizer::processBuffer(unsigned char* buffer, int bufferSize, int bitDep
 		buffer = reinterpret_cast<unsigned char*>(shortBuffer);
 	}
 }
-
-template <typename T>
-T Normalizer::getMax(T first, T second){
-	T result;
-	result = (first > second)? first : second;
-	return (result);
-}
-
-#endif
