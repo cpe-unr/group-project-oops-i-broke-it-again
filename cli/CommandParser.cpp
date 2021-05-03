@@ -1,7 +1,6 @@
 #include "CommandParser.h"
 #include "../WavFinder/WavFinderCommand.h"
 #include "../process/ProcessCommand.h"
-#include "../process/ProcessCommandHandler.h"
 #include "../edit-meta/EditMetaCommand.h"
 #include "../export/CsvExporter.h"
 #include "../export/ExportCommand.h"
@@ -50,7 +49,7 @@ Command* CommandParser::createCommand(std::string input) {
         return new WavFinderCommand(wavFinder);
     } else if (input == "process") {
         std::vector<IProcessable*> proccesses = {new NoiseGate(1), new Normalizer(), new Echo(5000)};
-        return new ProcessCommand(new ProcessCommandHandler(proccesses, wavFinder));
+        return new ProcessCommand(proccesses, wavFinder);
     } else if (input == "edit-meta") {
         return new EditMetaCommand(wavFinder);
     } else if (input == "export") {
