@@ -1,5 +1,8 @@
-audioprocessor: main.cpp Wav.o WavFinder.o Command.o CommandParser.o WavFinderCommand.o ProcessCommand.o EditMetaCommand.o ExportCommand.o CsvExporter.o noisegate.o echo.o normalizer.o
-	g++ -std=c++11 main.cpp Wav.o WavFinder.o Command.o CommandParser.o WavFinderCommand.o ProcessCommand.o EditMetaCommand.o ExportCommand.o CsvExporter.o noisegate.o echo.o normalizer.o -o audioprocessor
+audioprocessor: main.cpp App.o Wav.o WavFinder.o Command.o CommandParser.o WavFinderCommand.o ProcessCommand.o EditMetaCommand.o ExportCommand.o CsvExporter.o noisegate.o echo.o normalizer.o
+	g++ -std=c++11 main.cpp App.o Wav.o WavFinder.o Command.o CommandParser.o WavFinderCommand.o ProcessCommand.o EditMetaCommand.o ExportCommand.o CsvExporter.o noisegate.o echo.o normalizer.o -o audioprocessor
+
+App.o: app/App.h app/App.cpp
+	g++ -c -std=c++11 app/App.cpp
 
 Command.o: cli/Command.cpp cli/Command.h
 	g++ -c -std=c++11 cli/Command.cpp
