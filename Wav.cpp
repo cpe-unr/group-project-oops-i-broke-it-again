@@ -39,8 +39,8 @@ void Wav::writeFile(const std::string &outFileName) {
     std::ofstream outFile(outFileName, std::ios::out | std::ios::binary);
     outFile.write((char*)&waveHeader,sizeof(wav_header));
     outFile.write((char*)buffer, waveHeader.data_bytes);
-    outFile << "INAM" << std::endl << songName.length() << std::endl << songName;
-    outFile << "IART" << std::endl << Artist.length() << std::endl << Artist;
+    outFile << "INAM" << std::endl << songName.length() << std::endl << songName << std::endl;
+    outFile << "IART" << std::endl << Artist.length() << std::endl << Artist << std::endl;
     outFile.close();
 }
 
