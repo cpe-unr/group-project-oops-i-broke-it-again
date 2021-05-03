@@ -1,5 +1,5 @@
-audioprocessor: main.cpp Wav.o WavFinder.o Command.o CommandParser.o WavFinderCommand.o ProcessCommand.o ProcessCommandHandler.o EditMetaCommand.o noisegate.o echo.o normalizer.o
-	g++ -std=c++11 main.cpp Wav.o WavFinder.o Command.o CommandParser.o WavFinderCommand.o ProcessCommand.o ProcessCommandHandler.o EditMetaCommand.o noisegate.o echo.o normalizer.o -o audioprocessor
+audioprocessor: main.cpp Wav.o WavFinder.o Command.o CommandParser.o WavFinderCommand.o ProcessCommand.o ProcessCommandHandler.o EditMetaCommand.o ExportCommand.o CsvExporter.o noisegate.o echo.o normalizer.o
+	g++ -std=c++11 main.cpp Wav.o WavFinder.o Command.o CommandParser.o WavFinderCommand.o ProcessCommand.o ProcessCommandHandler.o EditMetaCommand.o ExportCommand.o CsvExporter.o noisegate.o echo.o normalizer.o -o audioprocessor
 
 Command.o: cli/Command.cpp cli/Command.h
 	g++ -c -std=c++11 cli/Command.cpp
@@ -21,6 +21,12 @@ ProcessCommandHandler.o: process/ProcessCommandHandler.h process/ProcessCommandH
 
 EditMetaCommand.o: edit-meta/EditMetaCommand.h edit-meta/EditMetaCommand.cpp
 	g++ -c -std=c++11 edit-meta/EditMetaCommand.cpp
+
+ExportCommand.o: export/ExportCommand.h export/ExportCommand.cpp
+	g++ -c -std=c++11 export/ExportCommand.cpp
+
+CsvExporter.o: export/CsvExporter.h export/CsvExporter.cpp
+	g++ -c -std=c++11 export/CsvExporter.cpp
 
 processor.o: processor.h processor.cpp
 	g++ -c -std=c++11 processor.cpp

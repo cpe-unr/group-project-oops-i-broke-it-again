@@ -21,11 +21,13 @@ class Normalizer : public IProcessable {
 * @param first - first value to compare
 * @param second - second value to compare
 */
-		template <typename T>
-		T getMax(T first, T second);
-
+	template <typename T>
+	T getMax(T first, T second){
+		T result;
+		result = (first > second)? first : second;
+		return (result);
+	}
 };
 
-#include "normalizer.cpp"
 #endif
 
