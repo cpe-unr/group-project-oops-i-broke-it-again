@@ -1,0 +1,80 @@
+\hypertarget{classNormalizer}{}\section{Normalizer Class Reference}
+\label{classNormalizer}\index{Normalizer@{Normalizer}}
+
+
+{\ttfamily \#include $<$normalizer.\+h$>$}
+
+
+
+Inheritance diagram for Normalizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{dd/d2d/classNormalizer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Normalizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{d9/da8/classNormalizer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classNormalizer_ab17632635876ca5cf6da795525889761}{process\+Buffer} (unsigned char $\ast$buffer, int buffer\+Size, int bit\+Depth, int num\+Channels) override
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{classNormalizer_a032dc937c5feeb167e5095f624434637}{get\+Max} (T first, T second)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to add a normalizer effect to .wav files 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNormalizer_a032dc937c5feeb167e5095f624434637}\label{classNormalizer_a032dc937c5feeb167e5095f624434637}} 
+\index{Normalizer@{Normalizer}!get\+Max@{get\+Max}}
+\index{get\+Max@{get\+Max}!Normalizer@{Normalizer}}
+\subsubsection{\texorpdfstring{get\+Max()}{getMax()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T Normalizer\+::get\+Max (\begin{DoxyParamCaption}\item[{T}]{first,  }\item[{T}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Function to find the max of two values 
+\begin{DoxyParams}{Parameters}
+{\em first} & -\/ first value to compare \\
+\hline
+{\em second} & -\/ second value to compare \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNormalizer_ab17632635876ca5cf6da795525889761}\label{classNormalizer_ab17632635876ca5cf6da795525889761}} 
+\index{Normalizer@{Normalizer}!process\+Buffer@{process\+Buffer}}
+\index{process\+Buffer@{process\+Buffer}!Normalizer@{Normalizer}}
+\subsubsection{\texorpdfstring{process\+Buffer()}{processBuffer()}}
+{\footnotesize\ttfamily void Normalizer\+::process\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{int}]{bit\+Depth,  }\item[{int}]{num\+Channels }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Function that normalizes each sample dependent on sound data 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ buffer containing sound data \\
+\hline
+{\em buffer\+Size} & -\/ size of the buffer of sound data \\
+\hline
+{\em bit\+Depth} & -\/ bit depth of the .wav \\
+\hline
+{\em num\+Channels} & -\/ number of channels of the .wav \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classIProcessable_a818d23db44eefe70ef052c3ce9340f11}{I\+Processable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+normalizer.\+h\item 
+normalizer.\+cpp\end{DoxyCompactItemize}

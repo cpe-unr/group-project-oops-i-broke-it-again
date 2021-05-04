@@ -1,0 +1,42 @@
+\hypertarget{classIProcessable}{}\section{I\+Processable Class Reference}
+\label{classIProcessable}\index{I\+Processable@{I\+Processable}}
+
+
+{\ttfamily \#include $<$processor.\+h$>$}
+
+
+
+Inheritance diagram for I\+Processable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{d5/dfc/classIProcessable__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classIProcessable_a818d23db44eefe70ef052c3ce9340f11}{process\+Buffer} (unsigned char $\ast$buffer, int buffer\+Size, int bit\+Depth, int num\+Channels)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for adding various effects to .wav files 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classIProcessable_a818d23db44eefe70ef052c3ce9340f11}\label{classIProcessable_a818d23db44eefe70ef052c3ce9340f11}} 
+\index{I\+Processable@{I\+Processable}!process\+Buffer@{process\+Buffer}}
+\index{process\+Buffer@{process\+Buffer}!I\+Processable@{I\+Processable}}
+\subsubsection{\texorpdfstring{process\+Buffer()}{processBuffer()}}
+{\footnotesize\ttfamily virtual void I\+Processable\+::process\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{int}]{bit\+Depth,  }\item[{int}]{num\+Channels }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Virtual function to be overridden by subclasses to add effects to .wav 
+
+Implemented in \hyperlink{classEcho_a1cdbe4bf78f5f6ac9b3609d9cd32de94}{Echo}, \hyperlink{classNoiseGate_a7d58bdbe85f4e2709c77f5d3d5f34e09}{Noise\+Gate}, and \hyperlink{classNormalizer_ab17632635876ca5cf6da795525889761}{Normalizer}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+processor.\+h\end{DoxyCompactItemize}

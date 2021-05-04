@@ -1,0 +1,80 @@
+\hypertarget{classEcho}{}\section{Echo Class Reference}
+\label{classEcho}\index{Echo@{Echo}}
+
+
+{\ttfamily \#include $<$echo.\+h$>$}
+
+
+
+Inheritance diagram for Echo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{d1/dd3/classEcho__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Echo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{da/d44/classEcho__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEcho_a9531515ffab8be1e38cbdc0e0e9338a6}{Echo} (int delay)
+\item 
+void \hyperlink{classEcho_a1cdbe4bf78f5f6ac9b3609d9cd32de94}{process\+Buffer} (unsigned char $\ast$buffer, int buffer\+Size, int bit\+Depth, int num\+Channels) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to add an echo effect to a .wav file 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEcho_a9531515ffab8be1e38cbdc0e0e9338a6}\label{classEcho_a9531515ffab8be1e38cbdc0e0e9338a6}} 
+\index{Echo@{Echo}!Echo@{Echo}}
+\index{Echo@{Echo}!Echo@{Echo}}
+\subsubsection{\texorpdfstring{Echo()}{Echo()}}
+{\footnotesize\ttfamily Echo\+::\+Echo (\begin{DoxyParamCaption}\item[{int}]{delay }\end{DoxyParamCaption})}
+
+Constructor for the \hyperlink{classEcho}{Echo} effect 
+\begin{DoxyParams}{Parameters}
+{\em delay} & -\/ the delay of each sample as an int \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEcho_a1cdbe4bf78f5f6ac9b3609d9cd32de94}\label{classEcho_a1cdbe4bf78f5f6ac9b3609d9cd32de94}} 
+\index{Echo@{Echo}!process\+Buffer@{process\+Buffer}}
+\index{process\+Buffer@{process\+Buffer}!Echo@{Echo}}
+\subsubsection{\texorpdfstring{process\+Buffer()}{processBuffer()}}
+{\footnotesize\ttfamily void Echo\+::process\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{int}]{bit\+Depth,  }\item[{int}]{num\+Channels }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Function that echoes each sample per user\textquotesingle{}s input 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ buffer containing sound data \\
+\hline
+{\em buffer\+Size} & -\/ size of the buffer of sound data \\
+\hline
+{\em bit\+Depth} & -\/ bit depth of the .wav \\
+\hline
+{\em num\+Channels} & -\/ number of channels of the .wav \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classIProcessable_a818d23db44eefe70ef052c3ce9340f11}{I\+Processable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+echo.\+h\item 
+echo.\+cpp\end{DoxyCompactItemize}
