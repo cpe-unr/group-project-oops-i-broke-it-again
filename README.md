@@ -8,13 +8,13 @@
 
 ## Responsibilities:
 #### Garrett W. 
--Creating classes to identify and load files from a directory
--Creating user interface for user to input a directory and manage wav files
--Creating a CSV exporter
+- Creating classes to identify and load files from a directory
+- Creating user interface for user to input a directory and manage wav files
+- Creating a CSV exporter
 #### Aaron G. 
--Creating class to read/write wav files of varying types (mono/stereo and varying bit depth)
--Creating classes to add audio effects to loaded wav files
--Creating methods to modify the metadata of a wav file
+- Creating class to read/write wav files of varying types (mono/stereo and varying bit depth)
+- Creating classes to add audio effects to loaded wav files
+- Creating methods to modify the metadata of a wav file
 
 ## Design
 (https://user-images.githubusercontent.com/70527694/117064473-1a0ff200-acdb-11eb-87bd-917d8c748fcf.jpg)
