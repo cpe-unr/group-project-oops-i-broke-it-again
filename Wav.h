@@ -2,6 +2,7 @@
 #define PROGRAMMING_ASSIGNMENT_3KL_WAV_H
 
 #include <string>
+#include <vector>
 #include "wavheader.h"
 /**
 * Class designed to read and write .wav files
@@ -22,9 +23,13 @@ public:
 private:
     unsigned char* buffer = NULL;
     wav_header waveHeader;
+	std::vector<std::string> listChunk;
 	std::string Artist = "0";
 	std::string songName = "0";
 	std::string filePath;
+	int aIndex = 0;
+	int snIndex = 0;
+
 public:
 /**
 * Deconstructor for the Wav object
