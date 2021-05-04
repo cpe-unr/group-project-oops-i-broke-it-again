@@ -3,6 +3,7 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include "Wav.h"
 
 
@@ -75,22 +76,22 @@ int Wav::getnumChannels() const {
 }
 
 std::string Wav::getArtist() const {
-    return listChunk[aIndex];
+    return listChunk.at(aIndex);
 }
 
 void Wav::setArtist(std::string x) {
-	listChunk[aIndex] = x;
-	listChunk[aIndex - 1] = x.length();
+	listChunk.at(aIndex) = x;
+	listChunk.at(aIndex - 1) = x.length();
 	
 }
 
 std::string Wav::getSongName() const {
-    return listChunk[snIndex];
+    return listChunk.at(snIndex);
 }
 
 void Wav::setSongName(std::string y) {
-	listChunk[snIndex] = y;
-	listChunk[snIndex - 1] = y.length();
+	listChunk.at(snIndex) = y;
+	listChunk.at(snIndex - 1) = y.length();
 }
 
 void Wav::setFilePath(std::string filePath) {
