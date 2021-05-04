@@ -1,5 +1,5 @@
 #include "App.h"
-#include "../WavFinder/WavFinder.h"
+#include "../wav-store/WavStore.h"
 #include "../export/CsvExporter.h"
 #include "../export/Exporter.h"
 #include "../cli/CommandParser.h"
@@ -13,15 +13,19 @@ void App::run() {
     printWelcome();
 
     std::string input = "";
-    while(input.find("exit")) {
+    while(true) {
         std::getline(std::cin, input);
+        if (input == "exit") {
+            break;
+        }
+        
         executeInput(input);
     }
 }
 
 void App::setup() {
-    wavFinder = new WavFinder();
-    exporter = new CsvExporter(wavFinder);
+    wavStore = new WavStore();
+    exporter = new CsvExporter(wavStore);
 }
 
 void App::printWelcome() const {
@@ -31,12 +35,13 @@ void App::printWelcome() const {
     "    process [file name] [output file name] [processors...]\n" <<
     "    edit-meta [file name] [meta data type] your new meta data value\n" <<
     "    export [output file name]\n" <<
+    "    exit\n" <<
     std::endl;
 }
 
 void App::executeInput(std::string input) {
     // TODO: Look into why we need a new parser for every input. Breaks export. File never created.
-    CommandParser parser(wavFinder, exporter);
+    CommandParser parser(wavStore, exporter);
     
     parser.parse(input);
     Command* command = parser.getCommand();

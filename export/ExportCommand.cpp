@@ -4,7 +4,7 @@
 
 ExportCommand::ExportCommand(Exporter* exporter): 
     exporter(exporter),
-    Command("hi", nullptr) {}
+    Command("export") {}
 
 void ExportCommand::execute(std::vector<std::string> args) {
     if (args.size() == 0) {

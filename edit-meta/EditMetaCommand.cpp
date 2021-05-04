@@ -1,11 +1,12 @@
 #include "EditMetaCommand.h"
 #include "../cli/Command.h"
+#include "../wav-store/WavStore.h"
 #include <iostream>
 #include <stdexcept>
 
-EditMetaCommand::EditMetaCommand(WavFinder* wavFinder): 
-    wavFinder(wavFinder),
-    Command("hi", nullptr) {}
+EditMetaCommand::EditMetaCommand(WavStore* wavStore): 
+    wavStore(wavStore),
+    Command("edit-meta") {}
 
 void EditMetaCommand::execute(std::vector<std::string> args) {
     if (args.size() < 3) {
@@ -20,7 +21,7 @@ void EditMetaCommand::execute(std::vector<std::string> args) {
     }
 
     try {
-        Wav* wav = wavFinder->getWavFromFileName(fileName);
+        Wav* wav = wavStore->getWavByFileName(fileName);
         
         if (metaDataName == "song") {
             wav->setSongName(newMetaData);
@@ -30,7 +31,7 @@ void EditMetaCommand::execute(std::vector<std::string> args) {
             std::cout << "Invalid metadata option." << std::endl;
         }
 
-        wav->writeFile(wavFinder->getFullPath(fileName));
+        wav->writeFile(wavStore->getWavByFileName(fileName)->getFilePath());
 
     } catch(std::runtime_error &e) {
         std::cout << e.what() << std::endl;

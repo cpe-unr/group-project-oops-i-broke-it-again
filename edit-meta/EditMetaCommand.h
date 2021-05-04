@@ -2,12 +2,12 @@
 #define EDIT_META_COMMAND_H
 
 #include "../cli/Command.h"
-#include "../WavFinder/WavFinder.h"
+#include "../wav-store/WavStore.h"
 
 class EditMetaCommand: public Command {
-    WavFinder* wavFinder;
+    WavStore* wavStore;
 public:
-    EditMetaCommand(WavFinder* wavFinder);
+    EditMetaCommand(WavStore* wavStore);
     void execute(std::vector<std::string> args) override;
 };
 
