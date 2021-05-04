@@ -1,9 +1,9 @@
-#include "../WavFinder/WavFinder.h"
+#include "../wav-store/WavStore.h"
 #include "../export/Exporter.h"
 #include <string>
 
 class App {
-    WavFinder* wavFinder;
+    WavStore* wavStore;
     Exporter* exporter;
     
     void setup();

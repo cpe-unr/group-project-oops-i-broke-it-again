@@ -26,8 +26,10 @@ private:
 	std::vector<std::string> listChunk;
 	std::string Artist = "0";
 	std::string songName = "0";
+	std::string filePath;
 	int aIndex = 0;
 	int snIndex = 0;
+
 public:
 /**
 * Deconstructor for the Wav object
@@ -70,6 +72,17 @@ public:
 * @param y - string to replace songName value
 */
 	void setSongName(std::string y);
+
+	/**
+	* Sets the full file path of source wav file.
+	* @param filePath - string path of wav file name.
+	*/
+	void setFilePath(std::string filePath);
+
+	/**
+	* Returns the full file path of source wav file.
+	*/
+	std::string getFilePath();
 };
 
 

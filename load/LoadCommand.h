@@ -2,18 +2,17 @@
 #define WAV_FINDER_COMMAND_H
 
 #include "../cli/Command.h"
-#include "../cli/CommandHandler.h"
+#include "WavLoader.h"
 #include <vector>
 #include <string>
 
-class WavFinderCommand: public Command {
+class LoadCommand: public Command {
+    WavLoader* wavLoader;
 
 public:
-    WavFinderCommand(CommandHandler* commandHandler);
+    LoadCommand(WavLoader* wavLoader);
     
     void execute(std::vector<std::string> args) override;
-
-    // virtual ~WavFinderCommand() {}
 };
 
 #endif
