@@ -26,6 +26,7 @@ void Wav::readFile(const std::string &fileName) {
 				std::getline(file, metadataTemp);
 				listChunk.emplace_back(metadataTemp);
 				aIndex = i;
+				std::cout << i << std::endl;
 				songName = metadataTemp;
 				i++;
 
@@ -80,8 +81,10 @@ std::string Wav::getArtist() const {
 }
 
 void Wav::setArtist(std::string x) {
-	listChunk.at(aIndex) = x;
-	listChunk.at(aIndex - 1) = x.length();
+	if( aIndex > 0){
+		listChunk.at(aIndex) = x;
+		listChunk.at(aIndex - 1) = x.length();
+	}
 	
 }
 
@@ -90,8 +93,10 @@ std::string Wav::getSongName() const {
 }
 
 void Wav::setSongName(std::string y) {
-	listChunk.at(snIndex) = y;
-	listChunk.at(snIndex - 1) = y.length();
+	if(snIndex  > 0){
+		listChunk.at(snIndex) = y;
+		listChunk.at(snIndex - 1) = y.length();
+	}
 }
 
 void Wav::setFilePath(std::string filePath) {
