@@ -7,7 +7,7 @@
 - Garrett Weinert
 
 ## Responsibilities:
-####Garrett W. 
+#### Garrett W. 
 -Creating classes to identify and load files from a directory
 -Creating user interface for user to input a directory and manage wav files
 -Creating a CSV exporter
