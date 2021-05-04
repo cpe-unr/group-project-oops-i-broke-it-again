@@ -53,9 +53,7 @@ void Wav::writeFile(const std::string &outFileName) {
     std::ofstream outFile(outFileName, std::ios::out | std::ios::binary);
     outFile.write((char*)&waveHeader,sizeof(wav_header));
     outFile.write((char*)buffer, waveHeader.data_bytes);
-    for(std::string i : listChunk){
-	outFile << i << std::endl;
-    }
+    outFile.write(reinterpret_cast<char*>(&listChunk[0]), listChunk.size() * sizeof(listChunk[0]));
     outFile.close();
 }
 
