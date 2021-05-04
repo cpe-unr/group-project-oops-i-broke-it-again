@@ -24,3 +24,4 @@ Our design uses a CLI for the user to access the various functions the program o
 ## Challenges encountered:
 - Choosing the best method by which wav files should be handled depending on technical data
 - Organizing work among the team in an online environment where communication is made more difficult
+- Operating Doxygen without ability to make the GitHub page. (Still remains in /docs)
