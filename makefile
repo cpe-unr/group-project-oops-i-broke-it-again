@@ -1,5 +1,5 @@
-audioprocessor: main.cpp App.o Wav.o WavFinder.o Command.o CommandParser.o WavFinderCommand.o ProcessCommand.o EditMetaCommand.o ExportCommand.o CsvExporter.o noisegate.o echo.o normalizer.o
-	g++ -std=c++11 main.cpp App.o Wav.o WavFinder.o Command.o CommandParser.o WavFinderCommand.o ProcessCommand.o EditMetaCommand.o ExportCommand.o CsvExporter.o noisegate.o echo.o normalizer.o -o audioprocessor
+audioprocessor: main.cpp App.o Wav.o WavStore.o Command.o CommandParser.o LoadCommand.o ProcessCommand.o WavLoader.o EditMetaCommand.o ExportCommand.o CsvExporter.o noisegate.o echo.o normalizer.o
+	g++ -std=c++11 main.cpp App.o Wav.o WavStore.o Command.o CommandParser.o LoadCommand.o ProcessCommand.o WavLoader.o EditMetaCommand.o ExportCommand.o CsvExporter.o noisegate.o echo.o normalizer.o -o audioprocessor
 
 App.o: app/App.h app/App.cpp
 	g++ -c -std=c++11 app/App.cpp
@@ -10,11 +10,14 @@ Command.o: cli/Command.cpp cli/Command.h
 CommandParser.o: cli/CommandParser.cpp cli/CommandParser.h
 	g++ -c -std=c++11 cli/CommandParser.cpp
 
-WavFinderCommand.o: cli/Command.h cli/Command.cpp WavFinder/WavFinderCommand.h WavFinder/WavFinderCommand.cpp
-	g++ -c -std=c++11 cli/Command.cpp WavFinder/WavFinderCommand.cpp
+LoadCommand.o: cli/Command.h cli/Command.cpp load/LoadCommand.h load/LoadCommand.cpp
+	g++ -c -std=c++11 cli/Command.cpp load/LoadCommand.cpp
 
-WavFinder.o: WavFinder/WavFinder.cpp WavFinder/WavFinder.h cli/Command.h WavFinder/WavFinderCommand.h interfaces/FileHandler.h
-	g++ -c -std=c++11 WavFinder/WavFinder.cpp
+WavLoader.o: load/WavLoader.h load/WavLoader.cpp
+	g++ -c -std=c++11 load/WavLoader.cpp
+
+WavStore.o: wav-store/WavStore.cpp wav-store/WavStore.h
+	g++ -c -std=c++11 wav-store/WavStore.cpp
 
 ProcessCommand.o: process/ProcessCommand.h process/ProcessCommand.cpp
 	g++ -c -std=c++11 process/ProcessCommand.cpp

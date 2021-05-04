@@ -1,27 +1,24 @@
 #include "CsvExporter.h"
-#include "../WavFinder/WavFinder.h"
+#include "../wav-store/WavStore.h"
 #include "../Wav.h"
 #include <string>
 #include <vector>
 #include <fstream>
 #include <iostream>
 
-CsvExporter::CsvExporter(WavFinder* wavFinder): wavFinder(wavFinder) {}
+CsvExporter::CsvExporter(WavStore* wavStore): wavStore(wavStore) {}
 
 void CsvExporter::exportFile(std::string outputFileName) {
-    std::vector<Wav*> wavs = wavFinder->getWavs();
-    std::vector<std::string> files = wavFinder->getFiles();
     std::ofstream outFile(outputFileName);
 
     writeRow(outFile, {
         "File Name", "Buffer Size", "Bit Depth", "Num of Channels", "Artist", "Song Name"
     });
 
-    for(int i = 0; i < wavs.size(); i++) {
-        Wav* wav = wavs.at(i);
-        std::string fileName = files.at(i);
+    for (auto wavMap : wavStore->getWavs()) {
+        Wav* wav = wavMap.second;
         writeRow(outFile, {
-            fileName,
+            wav->getFilePath(),
             std::to_string(wav->getBufferSize()),
             std::to_string(wav->getbitDepth()),
             std::to_string(wav->getnumChannels()),

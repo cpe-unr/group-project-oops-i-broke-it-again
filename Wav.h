@@ -24,6 +24,7 @@ private:
     wav_header waveHeader;
 	std::string Artist = "0";
 	std::string songName = "0";
+	std::string filePath;
 public:
 /**
 * Deconstructor for the Wav object
@@ -66,6 +67,17 @@ public:
 * @param y - string to replace songName value
 */
 	void setSongName(std::string y);
+
+	/**
+	* Sets the full file path of source wav file.
+	* @param filePath - string path of wav file name.
+	*/
+	void setFilePath(std::string filePath);
+
+	/**
+	* Returns the full file path of source wav file.
+	*/
+	std::string getFilePath();
 };
 
 

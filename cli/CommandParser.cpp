@@ -1,5 +1,6 @@
 #include "CommandParser.h"
-#include "../WavFinder/WavFinderCommand.h"
+#include "../wav-store/WavStore.h"
+#include "../load/LoadCommand.h"
 #include "../process/ProcessCommand.h"
 #include "../edit-meta/EditMetaCommand.h"
 #include "../export/CsvExporter.h"
@@ -14,8 +15,8 @@
 #include <algorithm>
 #include <iostream>
 
-CommandParser::CommandParser(WavFinder* wavFinder, Exporter* exporter): 
-    wavFinder(wavFinder), 
+CommandParser::CommandParser(WavStore* wavStore, Exporter* exporter): 
+    wavStore(wavStore), 
     exporter(exporter) {}
     
 void CommandParser::parse(std::string input) {
@@ -46,12 +47,12 @@ std::vector<std::string> CommandParser::getArgs() {
 
 Command* CommandParser::createCommand(std::string input) {
     if (input == "load") {
-        return new WavFinderCommand(wavFinder);
+        return new LoadCommand(new WavLoader(wavStore));
     } else if (input == "process") {
-        std::vector<IProcessable*> proccesses = {new NoiseGate(1), new Normalizer(), new Echo(5000)};
-        return new ProcessCommand(proccesses, wavFinder);
+        std::vector<IProcessable*> proccesses = {new NoiseGate(1), new Normalizer(), new Echo(10000)};
+        return new ProcessCommand(proccesses, wavStore);
     } else if (input == "edit-meta") {
-        return new EditMetaCommand(wavFinder);
+        return new EditMetaCommand(wavStore);
     } else if (input == "export") {
         return new ExportCommand(exporter);
     } else {

@@ -1,5 +1,5 @@
 #include "App.h"
-#include "../WavFinder/WavFinder.h"
+#include "../wav-store/WavStore.h"
 #include "../export/CsvExporter.h"
 #include "../export/Exporter.h"
 #include "../cli/CommandParser.h"
@@ -20,8 +20,8 @@ void App::run() {
 }
 
 void App::setup() {
-    wavFinder = new WavFinder();
-    exporter = new CsvExporter(wavFinder);
+    wavStore = new WavStore();
+    exporter = new CsvExporter(wavStore);
 }
 
 void App::printWelcome() const {
@@ -36,7 +36,7 @@ void App::printWelcome() const {
 
 void App::executeInput(std::string input) {
     // TODO: Look into why we need a new parser for every input. Breaks export. File never created.
-    CommandParser parser(wavFinder, exporter);
+    CommandParser parser(wavStore, exporter);
     
     parser.parse(input);
     Command* command = parser.getCommand();
