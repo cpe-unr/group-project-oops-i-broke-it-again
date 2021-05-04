@@ -1,7 +1,5 @@
 # CS 202 Semester Project (WOO)
-
-# CS 202 Semester Project Template
-## Group Members![Software_Design (4)]
+## Group Members!
 
 - Aaron Garza
 - Garrett Weinert
@@ -17,7 +15,8 @@
 - Creating methods to modify the metadata of a wav file
 
 ## Design
-(https://user-images.githubusercontent.com/70527694/117064473-1a0ff200-acdb-11eb-87bd-917d8c748fcf.jpg)
+![Software_Design (4)](https://user-images.githubusercontent.com/70527694/117069921-ef756780-ace1-11eb-9485-d84047a201db.jpg)
+
 
 Our design uses a CLI for the user to access the various functions the program offers that can be operated. Using the CLI, the user may load in the Wav files from an inputted directory. After the files are loaded in, the user can select either to process a particular wav file, or to edit the metadata of a particular wav file using the meta data type. Once the meta-data desired is selected and changed, the user can export the data to a csv file. Once the user is finished, they can exit the application using an "exit" command.
 
