@@ -15,11 +15,11 @@ void Normalizer::processBuffer(unsigned char* buffer, int bufferSize, int bitDep
 	}
 	if(bitDepth == 16){
 		short* shortBuffer = reinterpret_cast<short*>(buffer);
-		for(i = 0; i < bufferSize-1; i++){
+		for(i = 0; i < bufferSize/2-1; i++){
 			maxNum = getMax<short>(shortBuffer[i], shortBuffer[i+1]);
 		}
 		double multiplier = 32767/maxNum;
-		for(i = 0; i < bufferSize; i++){
+		for(i = 0; i < bufferSize/2; i++){
 			shortBuffer[i] = multiplier * shortBuffer[i];
 		}
 		buffer = reinterpret_cast<unsigned char*>(shortBuffer);

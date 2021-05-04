@@ -14,7 +14,7 @@
 				}
 				if(bitDepth == 16){
 					short* shortBuffer = reinterpret_cast<short*>(buffer);
-					for(int i = 0; i < bufferSize; i++){
+					for(int i = 0; i < bufferSize/2-delay; i++){
 						shortBuffer[i+delay] = .3 * shortBuffer[i] +  shortBuffer[i + delay];
 						if(shortBuffer[i] > 32767){
 							shortBuffer[i] = 32767;
@@ -34,7 +34,7 @@
 				}
 				if(bitDepth == 16){
 					short* shortBuffer = reinterpret_cast<short*>(buffer);
-					for(int i = 0; i < bufferSize; i++){
+					for(int i = 0; i < bufferSize/2-delay; i++){
 						shortBuffer[i+delay] = .3 * shortBuffer[i] +  shortBuffer[i + delay];
 						if(shortBuffer[i] > 32767){
 							shortBuffer[i] = 32767;
