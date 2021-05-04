@@ -1,0 +1,153 @@
+\hypertarget{classWav}{}\section{Wav Class Reference}
+\label{classWav}\index{Wav@{Wav}}
+
+
+{\ttfamily \#include $<$Wav.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classWav_a1c4230cec49d30147a5b8a1950083f7c}{read\+File} (const std\+::string \&file\+Name)
+\item 
+void \hyperlink{classWav_ad86f4a21d36719ae375ea2586f9f591f}{write\+File} (const std\+::string \&out\+File\+Name)
+\item 
+virtual \hyperlink{classWav_a1510b246ba121b103a60b8e7839af25f}{$\sim$\+Wav} ()
+\item 
+unsigned char $\ast$ \hyperlink{classWav_a2daf07a90ed34789e3a1874973d9bd36}{get\+Buffer} ()
+\item 
+int \hyperlink{classWav_a71fdfa1d9f5e7c1b86f07bbff4249dca}{get\+Buffer\+Size} () const
+\item 
+int \hyperlink{classWav_ac09aa7f7d656a42bffdfafa737c0bce8}{getbit\+Depth} () const
+\item 
+int \hyperlink{classWav_a3be0de234388ed90f2039bf193214c02}{getnum\+Channels} () const
+\item 
+std\+::string \hyperlink{classWav_ab7049943bab3ee9bf8c6ca4043989f3c}{get\+Artist} () const
+\item 
+void \hyperlink{classWav_acf8f0bbb6e0791d1f0c083c6700e0607}{set\+Artist} (std\+::string x)
+\item 
+std\+::string \hyperlink{classWav_a8de3a1bd3cc70540869a2a42ace98022}{get\+Song\+Name} () const
+\item 
+void \hyperlink{classWav_a129cd26f79a06e932e5cefda0ecdb35a}{set\+Song\+Name} (std\+::string y)
+\item 
+void \hyperlink{classWav_aa05dac85e219a94afc6a6f38530306ce}{set\+File\+Path} (std\+::string file\+Path)
+\item 
+std\+::string \hyperlink{classWav_a2a0cddb7e39fa964ef46737fcfcb9372}{get\+File\+Path} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class designed to read and write .wav files 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWav_a1510b246ba121b103a60b8e7839af25f}\label{classWav_a1510b246ba121b103a60b8e7839af25f}} 
+\index{Wav@{Wav}!````~Wav@{$\sim$\+Wav}}
+\index{````~Wav@{$\sim$\+Wav}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{$\sim$\+Wav()}{~Wav()}}
+{\footnotesize\ttfamily Wav\+::$\sim$\+Wav (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Deconstructor for the \hyperlink{classWav}{Wav} object 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWav_ab7049943bab3ee9bf8c6ca4043989f3c}\label{classWav_ab7049943bab3ee9bf8c6ca4043989f3c}} 
+\index{Wav@{Wav}!get\+Artist@{get\+Artist}}
+\index{get\+Artist@{get\+Artist}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{get\+Artist()}{getArtist()}}
+{\footnotesize\ttfamily std\+::string Wav\+::get\+Artist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the Artist held on a .wav file \mbox{\Hypertarget{classWav_ac09aa7f7d656a42bffdfafa737c0bce8}\label{classWav_ac09aa7f7d656a42bffdfafa737c0bce8}} 
+\index{Wav@{Wav}!getbit\+Depth@{getbit\+Depth}}
+\index{getbit\+Depth@{getbit\+Depth}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{getbit\+Depth()}{getbitDepth()}}
+{\footnotesize\ttfamily int Wav\+::getbit\+Depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the bit\+Depth of a .wav file \mbox{\Hypertarget{classWav_a2daf07a90ed34789e3a1874973d9bd36}\label{classWav_a2daf07a90ed34789e3a1874973d9bd36}} 
+\index{Wav@{Wav}!get\+Buffer@{get\+Buffer}}
+\index{get\+Buffer@{get\+Buffer}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{get\+Buffer()}{getBuffer()}}
+{\footnotesize\ttfamily unsigned char $\ast$ Wav\+::get\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the buffer of .wav sound data \mbox{\Hypertarget{classWav_a71fdfa1d9f5e7c1b86f07bbff4249dca}\label{classWav_a71fdfa1d9f5e7c1b86f07bbff4249dca}} 
+\index{Wav@{Wav}!get\+Buffer\+Size@{get\+Buffer\+Size}}
+\index{get\+Buffer\+Size@{get\+Buffer\+Size}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{get\+Buffer\+Size()}{getBufferSize()}}
+{\footnotesize\ttfamily int Wav\+::get\+Buffer\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the size of the wav buffer \mbox{\Hypertarget{classWav_a2a0cddb7e39fa964ef46737fcfcb9372}\label{classWav_a2a0cddb7e39fa964ef46737fcfcb9372}} 
+\index{Wav@{Wav}!get\+File\+Path@{get\+File\+Path}}
+\index{get\+File\+Path@{get\+File\+Path}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{get\+File\+Path()}{getFilePath()}}
+{\footnotesize\ttfamily std\+::string Wav\+::get\+File\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the full file path of source wav file. \mbox{\Hypertarget{classWav_a3be0de234388ed90f2039bf193214c02}\label{classWav_a3be0de234388ed90f2039bf193214c02}} 
+\index{Wav@{Wav}!getnum\+Channels@{getnum\+Channels}}
+\index{getnum\+Channels@{getnum\+Channels}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{getnum\+Channels()}{getnumChannels()}}
+{\footnotesize\ttfamily int Wav\+::getnum\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of channels of a .wav file \mbox{\Hypertarget{classWav_a8de3a1bd3cc70540869a2a42ace98022}\label{classWav_a8de3a1bd3cc70540869a2a42ace98022}} 
+\index{Wav@{Wav}!get\+Song\+Name@{get\+Song\+Name}}
+\index{get\+Song\+Name@{get\+Song\+Name}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{get\+Song\+Name()}{getSongName()}}
+{\footnotesize\ttfamily std\+::string Wav\+::get\+Song\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the song name contained in a .wav file \mbox{\Hypertarget{classWav_a1c4230cec49d30147a5b8a1950083f7c}\label{classWav_a1c4230cec49d30147a5b8a1950083f7c}} 
+\index{Wav@{Wav}!read\+File@{read\+File}}
+\index{read\+File@{read\+File}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{read\+File()}{readFile()}}
+{\footnotesize\ttfamily void Wav\+::read\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+Reads in the technical data and metadata of a .wav file 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & -\/ string of the .wav filename \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWav_acf8f0bbb6e0791d1f0c083c6700e0607}\label{classWav_acf8f0bbb6e0791d1f0c083c6700e0607}} 
+\index{Wav@{Wav}!set\+Artist@{set\+Artist}}
+\index{set\+Artist@{set\+Artist}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{set\+Artist()}{setArtist()}}
+{\footnotesize\ttfamily void Wav\+::set\+Artist (\begin{DoxyParamCaption}\item[{std\+::string}]{x }\end{DoxyParamCaption})}
+
+Changes the value of string Artist 
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ string to replace Artist value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWav_aa05dac85e219a94afc6a6f38530306ce}\label{classWav_aa05dac85e219a94afc6a6f38530306ce}} 
+\index{Wav@{Wav}!set\+File\+Path@{set\+File\+Path}}
+\index{set\+File\+Path@{set\+File\+Path}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{set\+File\+Path()}{setFilePath()}}
+{\footnotesize\ttfamily void Wav\+::set\+File\+Path (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})}
+
+Sets the full file path of source wav file. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & -\/ string path of wav file name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWav_a129cd26f79a06e932e5cefda0ecdb35a}\label{classWav_a129cd26f79a06e932e5cefda0ecdb35a}} 
+\index{Wav@{Wav}!set\+Song\+Name@{set\+Song\+Name}}
+\index{set\+Song\+Name@{set\+Song\+Name}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{set\+Song\+Name()}{setSongName()}}
+{\footnotesize\ttfamily void Wav\+::set\+Song\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{y }\end{DoxyParamCaption})}
+
+Changes value of string song\+Name 
+\begin{DoxyParams}{Parameters}
+{\em y} & -\/ string to replace song\+Name value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWav_ad86f4a21d36719ae375ea2586f9f591f}\label{classWav_ad86f4a21d36719ae375ea2586f9f591f}} 
+\index{Wav@{Wav}!write\+File@{write\+File}}
+\index{write\+File@{write\+File}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{write\+File()}{writeFile()}}
+{\footnotesize\ttfamily void Wav\+::write\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{out\+File\+Name }\end{DoxyParamCaption})}
+
+Writes the technical data and metadata to a .wav file 
+\begin{DoxyParams}{Parameters}
+{\em out\+File\+Name} & -\/ Name of the file being output \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Wav.\+h\item 
+Wav.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="IProcessable" name="IProcessable">
+<area shape="rect" id="node2" href="$dc/dd7/classEcho.html" title="Echo" alt="" coords="5,80,57,107"/>
+<area shape="rect" id="node3" href="$d3/d32/classNoiseGate.html" title="NoiseGate" alt="" coords="81,80,165,107"/>
+<area shape="rect" id="node4" href="$dc/d6d/classNormalizer.html" title="Normalizer" alt="" coords="190,80,275,107"/>
+</map>

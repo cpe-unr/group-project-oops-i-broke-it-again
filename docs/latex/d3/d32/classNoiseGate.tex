@@ -1,0 +1,80 @@
+\hypertarget{classNoiseGate}{}\section{Noise\+Gate Class Reference}
+\label{classNoiseGate}\index{Noise\+Gate@{Noise\+Gate}}
+
+
+{\ttfamily \#include $<$noisegate.\+h$>$}
+
+
+
+Inheritance diagram for Noise\+Gate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{d5/d39/classNoiseGate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Noise\+Gate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{d8/da9/classNoiseGate__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNoiseGate_a5106cfbd673a9ba6faf5f283a92ebf93}{Noise\+Gate} (double threshold)
+\item 
+void \hyperlink{classNoiseGate_a7d58bdbe85f4e2709c77f5d3d5f34e09}{process\+Buffer} (unsigned char $\ast$buffer, int buffer\+Size, int bit\+Depth, int num\+Channels) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to add a noise gate to a .wav file 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNoiseGate_a5106cfbd673a9ba6faf5f283a92ebf93}\label{classNoiseGate_a5106cfbd673a9ba6faf5f283a92ebf93}} 
+\index{Noise\+Gate@{Noise\+Gate}!Noise\+Gate@{Noise\+Gate}}
+\index{Noise\+Gate@{Noise\+Gate}!Noise\+Gate@{Noise\+Gate}}
+\subsubsection{\texorpdfstring{Noise\+Gate()}{NoiseGate()}}
+{\footnotesize\ttfamily Noise\+Gate\+::\+Noise\+Gate (\begin{DoxyParamCaption}\item[{double}]{threshold }\end{DoxyParamCaption})}
+
+Constructor for \hyperlink{classNoiseGate}{Noise\+Gate} effect 
+\begin{DoxyParams}{Parameters}
+{\em threshold} & -\/ percentage threshold for noise gating \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNoiseGate_a7d58bdbe85f4e2709c77f5d3d5f34e09}\label{classNoiseGate_a7d58bdbe85f4e2709c77f5d3d5f34e09}} 
+\index{Noise\+Gate@{Noise\+Gate}!process\+Buffer@{process\+Buffer}}
+\index{process\+Buffer@{process\+Buffer}!Noise\+Gate@{Noise\+Gate}}
+\subsubsection{\texorpdfstring{process\+Buffer()}{processBuffer()}}
+{\footnotesize\ttfamily void Noise\+Gate\+::process\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{int}]{bit\+Depth,  }\item[{int}]{num\+Channels }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Function that echoes each sample per user\textquotesingle{}s input 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ buffer containing sound data \\
+\hline
+{\em buffer\+Size} & -\/ size of the buffer of sound data \\
+\hline
+{\em bit\+Depth} & -\/ bit depth of the .wav \\
+\hline
+{\em num\+Channels} & -\/ number of channels of the .wav \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classIProcessable_a818d23db44eefe70ef052c3ce9340f11}{I\+Processable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+noisegate.\+h\item 
+noisegate.\+cpp\end{DoxyCompactItemize}
