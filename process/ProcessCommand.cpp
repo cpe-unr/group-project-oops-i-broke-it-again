@@ -8,7 +8,7 @@
 #include <fstream>
 
 ProcessCommand::ProcessCommand(std::vector<IProcessable*> proccesses, WavStore* wavStore): 
-    Command("hi", nullptr), 
+    Command("process"), 
     proccesses(proccesses), 
     wavStore(wavStore) {};
 

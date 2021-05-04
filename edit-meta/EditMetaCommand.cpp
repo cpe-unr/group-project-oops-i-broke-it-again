@@ -6,7 +6,7 @@
 
 EditMetaCommand::EditMetaCommand(WavStore* wavStore): 
     wavStore(wavStore),
-    Command("hi", nullptr) {}
+    Command("edit-meta") {}
 
 void EditMetaCommand::execute(std::vector<std::string> args) {
     if (args.size() < 3) {

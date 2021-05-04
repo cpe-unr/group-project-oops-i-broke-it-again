@@ -13,8 +13,12 @@ void App::run() {
     printWelcome();
 
     std::string input = "";
-    while(input.find("exit")) {
+    while(true) {
         std::getline(std::cin, input);
+        if (input == "exit") {
+            break;
+        }
+        
         executeInput(input);
     }
 }
@@ -31,6 +35,7 @@ void App::printWelcome() const {
     "    process [file name] [output file name] [processors...]\n" <<
     "    edit-meta [file name] [meta data type] your new meta data value\n" <<
     "    export [output file name]\n" <<
+    "    exit\n" <<
     std::endl;
 }
 
