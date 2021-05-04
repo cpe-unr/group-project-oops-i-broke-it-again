@@ -78,7 +78,7 @@ int Wav::getnumChannels() const {
 }
 
 std::string Wav::getArtist() const {
-    return Artist;
+    return listChunk[aIndex];
 }
 
 void Wav::setArtist(std::string x) {
@@ -88,7 +88,7 @@ void Wav::setArtist(std::string x) {
 }
 
 std::string Wav::getSongName() const {
-    return songName;
+    return listChunk[snIndex];
 }
 
 void Wav::setSongName(std::string y) {
