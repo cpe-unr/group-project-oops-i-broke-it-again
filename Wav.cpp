@@ -55,7 +55,7 @@ void Wav::writeFile(const std::string &outFileName) {
     outFile.write((char*)&waveHeader,sizeof(wav_header));
     outFile.write((char*)buffer, waveHeader.data_bytes);
     for(std::string i : listChunk){
-	outFile << i;
+	outFile << i << std::endl;
     }
     outFile.close();
 }
