@@ -12,9 +12,7 @@
 
 WavLoader::WavLoader(WavStore* wavStore): wavStore(wavStore) {}
 
-void WavLoader::load(std::vector<std::string> args) {
-    std::string dirPath = args.at(0);
-
+void WavLoader::load(std::string dirPath) {
     for (std::string fileName : getFilesFromDirectory(dirPath)) {
         std::string fullPath = dirPath + "/" + fileName;
 
@@ -23,7 +21,7 @@ void WavLoader::load(std::vector<std::string> args) {
         wav->setFilePath(fullPath);
         
         wavStore->addWav(fileName, wav);
-        std::cout << "added " << fileName << " " << wav->getBufferSize() << std::endl;
+        std::cout << "added " << fileName << std::endl;
     }
 }
 
