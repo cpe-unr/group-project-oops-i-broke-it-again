@@ -1,0 +1,67 @@
+\hypertarget{classLoadCommand}{}\section{Load\+Command Class Reference}
+\label{classLoadCommand}\index{Load\+Command@{Load\+Command}}
+
+
+{\ttfamily \#include $<$Load\+Command.\+h$>$}
+
+
+
+Inheritance diagram for Load\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{d5/d2d/classLoadCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Load\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{d8/dd2/classLoadCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLoadCommand_ac6f64508e948b4bca2b69c3843e5d24d}\label{classLoadCommand_ac6f64508e948b4bca2b69c3843e5d24d}} 
+{\bfseries Load\+Command} (\hyperlink{classWavLoader}{Wav\+Loader} $\ast$wav\+Loader)
+\item 
+void \hyperlink{classLoadCommand_a3e6c8b95c046e19dfd8e792876e28c50}{execute} (std\+::vector$<$ std\+::string $>$ args) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classCommand}{Command} used to facilitate loading of wav files. \begin{DoxyAuthor}{Author}
+Garrett Weinert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/4/2021 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classLoadCommand_a3e6c8b95c046e19dfd8e792876e28c50}\label{classLoadCommand_a3e6c8b95c046e19dfd8e792876e28c50}} 
+\index{Load\+Command@{Load\+Command}!execute@{execute}}
+\index{execute@{execute}!Load\+Command@{Load\+Command}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Load\+Command\+::execute (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Parses the given arguments and calls the loader to load wav files 
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ vector$<$string$>$ of user input command arguments used to load wav files. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classCommand}{Command}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+load/Load\+Command.\+h\item 
+load/Load\+Command.\+cpp\end{DoxyCompactItemize}

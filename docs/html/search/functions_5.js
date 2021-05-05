@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readfile',['readFile',['../de/dd3/classWav.html#a1c4230cec49d30147a5b8a1950083f7c',1,'Wav']]]
+  ['load',['load',['../da/ded/classWavLoader.html#a87fabe5a077f8ddb25a10f9e2f731f46',1,'WavLoader']]]
 ];

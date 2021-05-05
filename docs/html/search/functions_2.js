@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['getartist',['getArtist',['../de/dd3/classWav.html#ab7049943bab3ee9bf8c6ca4043989f3c',1,'Wav']]],
-  ['getbitdepth',['getbitDepth',['../de/dd3/classWav.html#ac09aa7f7d656a42bffdfafa737c0bce8',1,'Wav']]],
-  ['getbuffer',['getBuffer',['../de/dd3/classWav.html#a2daf07a90ed34789e3a1874973d9bd36',1,'Wav']]],
-  ['getbuffersize',['getBufferSize',['../de/dd3/classWav.html#a71fdfa1d9f5e7c1b86f07bbff4249dca',1,'Wav']]],
-  ['getfilepath',['getFilePath',['../de/dd3/classWav.html#a2a0cddb7e39fa964ef46737fcfcb9372',1,'Wav']]],
-  ['getmax',['getMax',['../dc/d6d/classNormalizer.html#a032dc937c5feeb167e5095f624434637',1,'Normalizer']]],
-  ['getnumchannels',['getnumChannels',['../de/dd3/classWav.html#a3be0de234388ed90f2039bf193214c02',1,'Wav']]],
-  ['getsongname',['getSongName',['../de/dd3/classWav.html#a8de3a1bd3cc70540869a2a42ace98022',1,'Wav']]]
+  ['echo',['Echo',['../dc/dd7/classEcho.html#a9531515ffab8be1e38cbdc0e0e9338a6',1,'Echo']]],
+  ['execute',['execute',['../db/dcb/classEditMetaCommand.html#ae96350ba54b8e3f4f84dcb8eab8da522',1,'EditMetaCommand::execute()'],['../d2/d7b/classExportCommand.html#ac06d7e8b8114b543efd03879f9825a7c',1,'ExportCommand::execute()'],['../da/d1f/classLoadCommand.html#a3e6c8b95c046e19dfd8e792876e28c50',1,'LoadCommand::execute()'],['../df/d9c/classProcessCommand.html#a2a1eda1ad6ea134baf1dcc19a0966222',1,'ProcessCommand::execute()']]],
+  ['exportfile',['exportFile',['../db/ddd/classCsvExporter.html#ac358fc74b1c01dbb3285fcdb38eb899e',1,'CsvExporter']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['echo',['Echo',['../dc/dd7/classEcho.html#a9531515ffab8be1e38cbdc0e0e9338a6',1,'Echo']]]
+  ['addwav',['addWav',['../d9/d58/classWavStore.html#a9a6a1112d64f48a0bcf93ac4a59771ef',1,'WavStore']]]
 ];

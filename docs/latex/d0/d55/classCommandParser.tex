@@ -1,0 +1,59 @@
+\hypertarget{classCommandParser}{}\section{Command\+Parser Class Reference}
+\label{classCommandParser}\index{Command\+Parser@{Command\+Parser}}
+
+
+{\ttfamily \#include $<$Command\+Parser.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCommandParser_a9146c54706cabfb837ba34709b2db02c}\label{classCommandParser_a9146c54706cabfb837ba34709b2db02c}} 
+{\bfseries Command\+Parser} (\hyperlink{classWavStore}{Wav\+Store} $\ast$wav\+Store, \hyperlink{classExporter}{Exporter} $\ast$exporter)
+\item 
+void \hyperlink{classCommandParser_a803c2a599cae6e722c198e6ba3dc9caf}{parse} (std\+::string input)
+\item 
+\hyperlink{classCommand}{Command} $\ast$ \hyperlink{classCommandParser_ab5697cd3e81c17b9963e21a6c135341f}{get\+Command} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classCommandParser_ab669ec9934f3c7f0490b3fed5b70e56c}{get\+Args} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles parsing the user input to create the corresponding cli command. \begin{DoxyAuthor}{Author}
+Garrett Weinert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/4/2021 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCommandParser_ab669ec9934f3c7f0490b3fed5b70e56c}\label{classCommandParser_ab669ec9934f3c7f0490b3fed5b70e56c}} 
+\index{Command\+Parser@{Command\+Parser}!get\+Args@{get\+Args}}
+\index{get\+Args@{get\+Args}!Command\+Parser@{Command\+Parser}}
+\subsubsection{\texorpdfstring{get\+Args()}{getArgs()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Command\+Parser\+::get\+Args (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the command arguments parsed by {\ttfamily parse}. \mbox{\Hypertarget{classCommandParser_ab5697cd3e81c17b9963e21a6c135341f}\label{classCommandParser_ab5697cd3e81c17b9963e21a6c135341f}} 
+\index{Command\+Parser@{Command\+Parser}!get\+Command@{get\+Command}}
+\index{get\+Command@{get\+Command}!Command\+Parser@{Command\+Parser}}
+\subsubsection{\texorpdfstring{get\+Command()}{getCommand()}}
+{\footnotesize\ttfamily \hyperlink{classCommand}{Command} $\ast$ Command\+Parser\+::get\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the command parsed by {\ttfamily parse}. \mbox{\Hypertarget{classCommandParser_a803c2a599cae6e722c198e6ba3dc9caf}\label{classCommandParser_a803c2a599cae6e722c198e6ba3dc9caf}} 
+\index{Command\+Parser@{Command\+Parser}!parse@{parse}}
+\index{parse@{parse}!Command\+Parser@{Command\+Parser}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily void Command\+Parser\+::parse (\begin{DoxyParamCaption}\item[{std\+::string}]{input }\end{DoxyParamCaption})}
+
+Parse the user input and sets the arguments and builds the command. 
+\begin{DoxyParams}{Parameters}
+{\em input} & -\/ string of user input. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cli/Command\+Parser.\+h\item 
+cli/Command\+Parser.\+cpp\end{DoxyCompactItemize}

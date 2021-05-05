@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['branches',['Branches',['../d2/dc1/md_CONTRIBUTING.html',1,'']]]
+  ['addwav',['addWav',['../d9/d58/classWavStore.html#a9a6a1112d64f48a0bcf93ac4a59771ef',1,'WavStore']]],
+  ['app',['App',['../dd/d64/classApp.html',1,'']]]
 ];

@@ -1,0 +1,67 @@
+\hypertarget{classEditMetaCommand}{}\section{Edit\+Meta\+Command Class Reference}
+\label{classEditMetaCommand}\index{Edit\+Meta\+Command@{Edit\+Meta\+Command}}
+
+
+{\ttfamily \#include $<$Edit\+Meta\+Command.\+h$>$}
+
+
+
+Inheritance diagram for Edit\+Meta\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{d9/da2/classEditMetaCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Edit\+Meta\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{d8/db7/classEditMetaCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEditMetaCommand_a1d1216017cad44cea224881c55163854}\label{classEditMetaCommand_a1d1216017cad44cea224881c55163854}} 
+{\bfseries Edit\+Meta\+Command} (\hyperlink{classWavStore}{Wav\+Store} $\ast$wav\+Store)
+\item 
+void \hyperlink{classEditMetaCommand_ae96350ba54b8e3f4f84dcb8eab8da522}{execute} (std\+::vector$<$ std\+::string $>$ args) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A command class that when executed will mutate the meta data of an wav file. \begin{DoxyAuthor}{Author}
+Garrett Weinert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/4/2021 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEditMetaCommand_ae96350ba54b8e3f4f84dcb8eab8da522}\label{classEditMetaCommand_ae96350ba54b8e3f4f84dcb8eab8da522}} 
+\index{Edit\+Meta\+Command@{Edit\+Meta\+Command}!execute@{execute}}
+\index{execute@{execute}!Edit\+Meta\+Command@{Edit\+Meta\+Command}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Edit\+Meta\+Command\+::execute (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Exucute will update the specified meta data field of a wav file. 
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ vector$<$string$>$ of the file, meta data field to edit, and value of meta data. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classCommand}{Command}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+edit-\/meta/Edit\+Meta\+Command.\+h\item 
+edit-\/meta/Edit\+Meta\+Command.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+\hypertarget{classWavStore}{}\section{Wav\+Store Class Reference}
+\label{classWavStore}\index{Wav\+Store@{Wav\+Store}}
+
+
+{\ttfamily \#include $<$Wav\+Store.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \hyperlink{classWav}{Wav} $\ast$ $>$ \hyperlink{classWavStore_a859da99c5b79ff98c0582fee694bf28c}{get\+Wavs} () const
+\item 
+void \hyperlink{classWavStore_a9a6a1112d64f48a0bcf93ac4a59771ef}{add\+Wav} (std\+::string key, \hyperlink{classWav}{Wav} $\ast$wav)
+\item 
+\hyperlink{classWav}{Wav} $\ast$ \hyperlink{classWavStore_a7288434f1eeb9e026e3cb5aea92dc95b}{get\+Wav\+By\+File\+Name} (std\+::string key)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classWav}{Wav} file storage. \begin{DoxyAuthor}{Author}
+Garrett Weinert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/4/2021 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWavStore_a9a6a1112d64f48a0bcf93ac4a59771ef}\label{classWavStore_a9a6a1112d64f48a0bcf93ac4a59771ef}} 
+\index{Wav\+Store@{Wav\+Store}!add\+Wav@{add\+Wav}}
+\index{add\+Wav@{add\+Wav}!Wav\+Store@{Wav\+Store}}
+\subsubsection{\texorpdfstring{add\+Wav()}{addWav()}}
+{\footnotesize\ttfamily void Wav\+Store\+::add\+Wav (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{\hyperlink{classWav}{Wav} $\ast$}]{wav }\end{DoxyParamCaption})}
+
+Adds a wav file to the store using the corresponding file name as the key. 
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ string of corresponding file name. \\
+\hline
+{\em wav} & -\/ Wav$\ast$ of wav file to store. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWavStore_a7288434f1eeb9e026e3cb5aea92dc95b}\label{classWavStore_a7288434f1eeb9e026e3cb5aea92dc95b}} 
+\index{Wav\+Store@{Wav\+Store}!get\+Wav\+By\+File\+Name@{get\+Wav\+By\+File\+Name}}
+\index{get\+Wav\+By\+File\+Name@{get\+Wav\+By\+File\+Name}!Wav\+Store@{Wav\+Store}}
+\subsubsection{\texorpdfstring{get\+Wav\+By\+File\+Name()}{getWavByFileName()}}
+{\footnotesize\ttfamily \hyperlink{classWav}{Wav} $\ast$ Wav\+Store\+::get\+Wav\+By\+File\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})}
+
+Returns a Wav$\ast$ given the corresponding file name. 
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ string of corresponding file name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWavStore_a859da99c5b79ff98c0582fee694bf28c}\label{classWavStore_a859da99c5b79ff98c0582fee694bf28c}} 
+\index{Wav\+Store@{Wav\+Store}!get\+Wavs@{get\+Wavs}}
+\index{get\+Wavs@{get\+Wavs}!Wav\+Store@{Wav\+Store}}
+\subsubsection{\texorpdfstring{get\+Wavs()}{getWavs()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, \hyperlink{classWav}{Wav} $\ast$ $>$ Wav\+Store\+::get\+Wavs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns a map of all loaded wav files with the file name as the key. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wav-\/store/Wav\+Store.\+h\item 
+wav-\/store/Wav\+Store.\+cpp\end{DoxyCompactItemize}

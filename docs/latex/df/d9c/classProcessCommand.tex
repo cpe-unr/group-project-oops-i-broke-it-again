@@ -1,0 +1,67 @@
+\hypertarget{classProcessCommand}{}\section{Process\+Command Class Reference}
+\label{classProcessCommand}\index{Process\+Command@{Process\+Command}}
+
+
+{\ttfamily \#include $<$Process\+Command.\+h$>$}
+
+
+
+Inheritance diagram for Process\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{d8/d69/classProcessCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Process\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{d9/d1f/classProcessCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classProcessCommand_a6fa4eeb8ead41b34e74a4d76ea928e52}\label{classProcessCommand_a6fa4eeb8ead41b34e74a4d76ea928e52}} 
+{\bfseries Process\+Command} (std\+::vector$<$ \hyperlink{classIProcessable}{I\+Processable} $\ast$$>$ proccesses, \hyperlink{classWavStore}{Wav\+Store} $\ast$wav\+Store)
+\item 
+void \hyperlink{classProcessCommand_a2a1eda1ad6ea134baf1dcc19a0966222}{execute} (std\+::vector$<$ std\+::string $>$ args) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classCommand}{Command} to facilitate processing of wav files. \begin{DoxyAuthor}{Author}
+Garrett Weinert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/4/2021 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classProcessCommand_a2a1eda1ad6ea134baf1dcc19a0966222}\label{classProcessCommand_a2a1eda1ad6ea134baf1dcc19a0966222}} 
+\index{Process\+Command@{Process\+Command}!execute@{execute}}
+\index{execute@{execute}!Process\+Command@{Process\+Command}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Process\+Command\+::execute (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Parses the user input command arguments to correctly process the given wav file. 
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ vector$<$string$>$ of wav file to process, output file name, and processes. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classCommand}{Command}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+process/Process\+Command.\+h\item 
+process/Process\+Command.\+cpp\end{DoxyCompactItemize}

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['readfile',['readFile',['../de/dd3/classWav.html#a1c4230cec49d30147a5b8a1950083f7c',1,'Wav']]]
+  ['noisegate',['NoiseGate',['../d3/d32/classNoiseGate.html',1,'NoiseGate'],['../d3/d32/classNoiseGate.html#a5106cfbd673a9ba6faf5f283a92ebf93',1,'NoiseGate::NoiseGate()']]],
+  ['normalizer',['Normalizer',['../dc/d6d/classNormalizer.html',1,'']]]
 ];

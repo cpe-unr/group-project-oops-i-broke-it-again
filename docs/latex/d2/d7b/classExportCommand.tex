@@ -1,0 +1,67 @@
+\hypertarget{classExportCommand}{}\section{Export\+Command Class Reference}
+\label{classExportCommand}\index{Export\+Command@{Export\+Command}}
+
+
+{\ttfamily \#include $<$Export\+Command.\+h$>$}
+
+
+
+Inheritance diagram for Export\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{d1/d67/classExportCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Export\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{d8/db5/classExportCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExportCommand_a28a0d2e9fd33e7b78ccfa716d03c7d2f}\label{classExportCommand_a28a0d2e9fd33e7b78ccfa716d03c7d2f}} 
+{\bfseries Export\+Command} (\hyperlink{classExporter}{Exporter} $\ast$exporter)
+\item 
+void \hyperlink{classExportCommand_ac06d7e8b8114b543efd03879f9825a7c}{execute} (std\+::vector$<$ std\+::string $>$ args) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classCommand}{Command} that calls the injected exporter when executed. \begin{DoxyAuthor}{Author}
+Garrett Weinert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/4/2021 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classExportCommand_ac06d7e8b8114b543efd03879f9825a7c}\label{classExportCommand_ac06d7e8b8114b543efd03879f9825a7c}} 
+\index{Export\+Command@{Export\+Command}!execute@{execute}}
+\index{execute@{execute}!Export\+Command@{Export\+Command}}
+\subsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Export\+Command\+::execute (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Parses the given arguments and calls the exporter to export the wav files. 
+\begin{DoxyParams}{Parameters}
+{\em args} & -\/ vector$<$string$>$ of user input command arguments used to name the created C\+SV file. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classCommand}{Command}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+export/Export\+Command.\+h\item 
+export/Export\+Command.\+cpp\end{DoxyCompactItemize}
