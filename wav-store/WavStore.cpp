@@ -17,6 +17,6 @@ Wav* WavStore::getWavByFileName(std::string fileName) {
     try {
         return wavs.at(fileName);
     } catch(std::out_of_range &e) {
-        std::cout << "File doesn't exist." << std::endl;
+        throw std::runtime_error("File doesn't exist.");
     }
 }

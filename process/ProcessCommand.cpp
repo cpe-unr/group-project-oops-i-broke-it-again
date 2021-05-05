@@ -58,7 +58,6 @@ void ProcessCommand::processWav(std::vector<std::string>processArgs, Wav* wav) {
                 wav->getnumChannels()
             );
         } else if (processArg == "echo") {
-            std::cout << "hi: " << wav->getBufferSize() << std::endl;
             echo->processBuffer(
                 wav->getBuffer(),
                 wav->getBufferSize(),
